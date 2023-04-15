@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{C0269631-1E11-43C2-9197-913219074FE6}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web/Properties/launchSettings.json">
+    <Files>
+      <File FileName="Web/Data/AppDbContext.cs" Line="21" Column="31" />
+      <File FileName="Web/Models/User.cs" />
+      <File FileName="Web/Models/Product.cs" />
+      <File FileName="Web/Models/Category.cs" />
+      <File FileName="Web/Models/Contact.cs" Line="4" Column="22" />
+      <File FileName="Web/Program.cs" Line="50" Column="1" />
+      <File FileName="Web/appsettings.json" />
+      <File FileName="Web/Properties/launchSettings.json" Line="22" Column="27" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="K101Ecommerce" expanded="True">
+            <Node name="Web" expanded="True">
+              <Node name="Data" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
