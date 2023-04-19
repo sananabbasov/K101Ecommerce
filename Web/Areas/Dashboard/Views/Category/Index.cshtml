@@ -1,5 +1,8 @@
 @model IEnumerable<Category>
 
+<a class="btn btn-success" href="/dashboard/category/create">Create</a>
+
+
 @foreach (var category in Model)
 {
     <p>@category.CategoryName</p>

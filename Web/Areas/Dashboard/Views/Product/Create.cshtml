@@ -1,0 +1,44 @@
+﻿@model Product
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Create product</h6>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input class="form-control" asp-for="Name" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label"></label>
+                <input class="form-control" asp-for="Price" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Discount" class="form-label"></label>
+                <input class="form-control" asp-for="Discount" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Quantity" class="form-label"></label>
+                <input class="form-control" asp-for="Quantity" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="PhotoUrl" class="form-label"></label>
+                <input class="form-control" asp-for="PhotoUrl" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="CategoryId" class="form-label"></label>
+                <select asp-for="CategoryId" class="form-control" asp-items="@ViewBag.Categories">
+                    <option value="">Select Category</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea class="form-control" asp-for="Description" rows="10"></textarea>
+            </div>
+
+            <input class="btn btn-success mt-3" type="submit" value="Create" />
+        </form>
+    </div>
+</div>

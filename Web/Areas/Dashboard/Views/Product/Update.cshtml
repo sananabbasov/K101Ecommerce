@@ -1,0 +1,55 @@
+@model ProductEditViewModel
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Create product</h6>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Product.Name" class="form-label"></label>
+                <input class="form-control" asp-for="Product.Name" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Product.Price" class="form-label"></label>
+                <input class="form-control" asp-for="Product.Price" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Product.Discount" class="form-label"></label>
+                <input class="form-control" asp-for="Product.Discount" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Product.Quantity" class="form-label"></label>
+                <input class="form-control" asp-for="Product.Quantity" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Product.PhotoUrl" class="form-label"></label>
+                <input class="form-control" asp-for="Product.PhotoUrl" />
+                <div class="col-lg-3">
+                    <img class="img-fluid my-3" src="@Model.Product.PhotoUrl" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Category</label>
+                <select name="CategoryId" class="form-control">
+                    @foreach (var cat in Model.Categories)
+                    {
+                        if (cat.Id == Model.Product.CategoryId)
+                        {
+                            <option value="@cat.Id" selected>@cat.CategoryName</option>
+                        }else{
+                            <option value="@cat.Id">@cat.CategoryName</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Product.Description" class="form-label"></label>
+                <textarea class="form-control" asp-for="Product.Description" rows="10"></textarea>
+            </div>
+
+            <input class="btn btn-success mt-3" type="submit" value="Create" />
+        </form>
+    </div>
+</div>

@@ -28,6 +28,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0hvbWUvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sanan/Desktop/Projects/Compar Academy/K101/Web/K101Ecommerce/Web/Areas/Dashboard/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1Byb2R1Y3QvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanan/Desktop/Projects/Compar Academy/K101/Web/K101Ecommerce/Web/Areas/Dashboard/Views/Product/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1Byb2R1Y3QvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanan/Desktop/Projects/Compar Academy/K101/Web/K101Ecommerce/Web/Areas/Dashboard/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1Byb2R1Y3QvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanan/Desktop/Projects/Compar Academy/K101/Web/K101Ecommerce/Web/Areas/Dashboard/Views/Product/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1Byb2R1Y3QvVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sanan/Desktop/Projects/Compar Academy/K101/Web/K101Ecommerce/Web/Areas/Dashboard/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1NoYXJlZC9fQWRtaW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
