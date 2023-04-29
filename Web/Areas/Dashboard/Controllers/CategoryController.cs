@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Web.Data;
 using Web.Models;
@@ -5,6 +6,7 @@ using Web.Models;
 namespace Web.Areas.Dashboard.Controllers
 {
     [Area("Dashboard")]
+    [Authorize]
     public class CategoryController : Controller
     {
         private readonly AppDbContext _context;
@@ -12,7 +14,7 @@ namespace Web.Areas.Dashboard.Controllers
         {
             _context = context;
         }
-        
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -35,7 +37,7 @@ namespace Web.Areas.Dashboard.Controllers
         }
 
     }
-    
+
 }
 
 

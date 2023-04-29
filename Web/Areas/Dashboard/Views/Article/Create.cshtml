@@ -1,0 +1,60 @@
+﻿@model Article
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Create product</h6>
+    </div>
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+
+    <div class="card-body">
+        <form method="post" enctype="multipart/form-data">
+
+
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label"></label>
+                <input class="form-control" asp-for="Title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+
+            <div class="mb-3">
+                <label asp-for="Tags" class="form-label"></label>
+                <select name="tagIds" class="form-control" asp-items="@ViewBag.Tags" multiple>
+                    <option value="">Select Tags</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="PhotoUrl" class="form-label"></label>
+                <input class="form-control" type="file" name="Photo" />
+            </div>
+
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea id="Description" class="form-control" asp-for="Description" rows="10"></textarea>
+            </div>
+
+
+            <input class="btn btn-success mt-3" type="submit" value="Create" />
+        </form>
+    </div>
+</div>
+
+
+@section Scripts{
+
+    <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
+
+
+    <script>
+        CKEDITOR.replace('Description');
+    </script>
+}

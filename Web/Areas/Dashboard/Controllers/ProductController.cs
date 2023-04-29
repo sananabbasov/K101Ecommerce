@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,7 @@ using Web.Models;
 namespace Web.Areas.Dashboard.Controllers
 {
     [Area("Dashboard")]
+    [Authorize]
     public class ProductController : Controller
     {
         private readonly AppDbContext _context;
