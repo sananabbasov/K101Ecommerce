@@ -27,7 +27,7 @@ namespace Web.Controllers
 
         public IActionResult Detail(int id)
         {
-            var article = _context.Articles.Include(x=>x.Tags).Include(x=>x.User).SingleOrDefault(x=>x.Id == id);
+            var article = _context.Articles.Include(x=>x.ArticleTags).ThenInclude(x=>x.Tag).Include(x=>x.User).SingleOrDefault(x=>x.Id == id);
 
             ArticleDetailVM vm = new()
             {

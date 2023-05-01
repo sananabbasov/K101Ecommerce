@@ -39,9 +39,9 @@
                             <td>@article.Title</td>
                             <td>@article.User.Name  @article.User.Surname </td>
                             <td>
-                                @foreach (var tag in article.Tags)
+                                @foreach (var tag in article.ArticleTags)
                                 {
-                                    <span class="badge badge-primary">@tag.TagName</span>
+                                    <span class="badge badge-primary">@tag.Tag.TagName</span>
                                 }
                             </td>
                             <td>

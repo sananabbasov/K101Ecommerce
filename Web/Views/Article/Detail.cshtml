@@ -102,9 +102,9 @@
                     <div class="tag-section">
                         <h4>Tags</h4>
                         <ul>
-                            @foreach (var tags in Model.Article.Tags)
+                            @foreach (var tags in Model.Article.ArticleTags)
                             {
-                                <li><a href="single-news.html">@tags.TagName</a></li>
+                                <li><a href="single-news.html">@tags.Tag.TagName</a></li>
                             }
                         </ul>
                     </div>

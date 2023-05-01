@@ -33,7 +33,7 @@ namespace Web.Areas.Dashboard.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var articles = _context.Articles.Include(x => x.Tags).Include(y => y.User).ToList();
+            var articles = _context.Articles.Include(x => x.ArticleTags).ThenInclude(x => x.Tag).Include(y => y.User).ToList();
             return View(articles);
         }
 
@@ -60,42 +60,43 @@ namespace Web.Areas.Dashboard.Controllers
             try
             {
 
-           
-            var path = "/uploads/" + DateTime.Now.ToString("MM-dd-yyyy")+"_"+Guid.NewGuid() + Path.GetExtension(Photo.FileName);
-    
-            using (var fileStream = new FileStream(_env.WebRootPath+path, FileMode.Create))
-            {
-                Photo.CopyTo(fileStream);
-            }
 
-            var userId = _httpContext.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            article.UserId = userId;
-            article.PhotoUrl = path;
-            article.CreatedDate = DateTime.Now;
-            article.UpdatedDate = DateTime.Now;
+                var path = "/uploads/" + DateTime.Now.ToString("MM-dd-yyyy") + "_" + Guid.NewGuid() + Path.GetExtension(Photo.FileName);
 
-
-            await _context.Articles.AddAsync(article);
-            await _context.SaveChangesAsync();
-
-
-            List<ArticleTag> lisTags = new();
-
-            for (int i = 0; i < tagIds.Count; i++)
-            {
-                ArticleTag articleTag = new()
+                using (var fileStream = new FileStream(_env.WebRootPath + path, FileMode.Create))
                 {
-                    ArticleId = article.Id, // 32, 32,32,
-                    TagId = tagIds[i]       // 1, 2, 3
-                };
-                lisTags.Add(articleTag);
-            }
+                    Photo.CopyTo(fileStream);
+                }
+
+                var userId = _httpContext.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+                article.UserId = userId;
+                article.PhotoUrl = path;
+                article.CreatedDate = DateTime.Now;
+                article.UpdatedDate = DateTime.Now;
+                article.SeoUrl = "234";
 
 
-            await _context.ArticleTags.AddRangeAsync(lisTags);
-            await _context.SaveChangesAsync();
+                await _context.Articles.AddAsync(article);
+                await _context.SaveChangesAsync();
 
-            return RedirectToAction("Index");
+
+                List<ArticleTag> lisTags = new();
+
+                for (int i = 0; i < tagIds.Count; i++)
+                {
+                    ArticleTag articleTag = new()
+                    {
+                        ArticleId = article.Id, // 32, 32,32,
+                        TagId = tagIds[i]       // 1, 2, 3
+                    };
+                    lisTags.Add(articleTag);
+                }
+
+
+                await _context.ArticleTags.AddRangeAsync(lisTags);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Index");
 
             }
             catch (Exception ex)
