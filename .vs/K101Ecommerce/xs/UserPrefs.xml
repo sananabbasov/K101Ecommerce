@@ -1,31 +1,21 @@
 ﻿<Properties StartupConfiguration="{C0269631-1E11-43C2-9197-913219074FE6}|https">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web/Models/Product.cs">
+    <Files>
+      <File FileName="Web/Views/Home/Index.cshtml" />
+      <File FileName="Web/Controllers/ArticleController.cs" />
+      <File FileName="Web/Models/Article.cs" />
+      <File FileName="Web/Models/Category.cs" />
+      <File FileName="Web/Models/Contact.cs" />
+      <File FileName="Web/Controllers/ProductController.cs" />
+      <File FileName="Web/ViewModels/DetailVM.cs" />
+      <File FileName="Web/Models/Product.cs" Line="8" Column="30" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Web/Views/Article/Detail.cshtml">
-    <Files>
-      <File FileName="Web/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="Web/Views/Article/Detail.cshtml" Line="109" Column="29" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="K101Ecommerce" expanded="True">
-            <Node name="Web" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Article" expanded="True">
-                  <Node name="Detail.cshtml" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
