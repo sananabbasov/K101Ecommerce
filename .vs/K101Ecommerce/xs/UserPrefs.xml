@@ -1,21 +1,41 @@
 ﻿<Properties StartupConfiguration="{C0269631-1E11-43C2-9197-913219074FE6}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Web/Models/Product.cs">
-    <Files>
-      <File FileName="Web/Views/Home/Index.cshtml" />
-      <File FileName="Web/Controllers/ArticleController.cs" />
-      <File FileName="Web/Models/Article.cs" />
-      <File FileName="Web/Models/Category.cs" />
-      <File FileName="Web/Models/Contact.cs" />
-      <File FileName="Web/Controllers/ProductController.cs" />
-      <File FileName="Web/ViewModels/DetailVM.cs" />
-      <File FileName="Web/Models/Product.cs" Line="8" Column="30" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web/Areas/Dashboard/Controllers/TeamController.cs">
+    <Files>
+      <File FileName="Web/Areas/Dashboard/Controllers/TeamController.cs" Line="54" Column="1" />
+      <File FileName="Web/Areas/Dashboard/ViewModels/SocialVM.cs" Line="4" Column="23" />
+      <File FileName="Web/Areas/Dashboard/Views/Team/Create.cshtml" Line="13" Column="85" />
+      <File FileName="Web/Program.cs" Line="14" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="K101Ecommerce" expanded="True">
+            <Node name="Web" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Dashboard" expanded="True">
+                  <Node name="Controllers" expanded="True">
+                    <Node name="TeamController.cs" selected="True" />
+                  </Node>
+                  <Node name="ViewModels" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="Social" expanded="True" />
+                    <Node name="Team" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

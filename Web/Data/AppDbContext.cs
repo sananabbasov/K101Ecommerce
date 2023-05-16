@@ -16,6 +16,9 @@ namespace Web.Data
 		public DbSet<Article> Articles { get; set; }
 		public DbSet<Tag> Tags { get; set; }
 		public DbSet<ArticleTag> ArticleTags { get; set; }
+		public DbSet<Team> Teams { get; set; }
+		public DbSet<Social> Socials { get; set; }
+		public DbSet<TeamSocial> TeamSocials { get; set; }
 
 
 		protected override void OnModelCreating(ModelBuilder builder)
