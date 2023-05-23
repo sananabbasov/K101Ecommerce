@@ -44,13 +44,13 @@ namespace Web.Areas.Dashboard.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Team team, List<int> SocialId, List<string> SocialUrl)
+        public async Task<IActionResult> Create(Team team, List<int> SocialId, List<string> SocialUrl)
         {
             try
             {
                 team.PositionId = 1;
-                _context.Teams.Add(team);
-                _context.SaveChanges();
+                await _context.Teams.AddAsync(team);
+                await _context.SaveChangesAsync();
 
                 for (int i = 0; i < SocialId.Count; i++)
                 {
@@ -62,8 +62,8 @@ namespace Web.Areas.Dashboard.Controllers
                             SocialId = SocialId[i],
                             UserUrl = SocialUrl[i]
                         };
-                        _context.TeamSocials.Add(ts);
-                        _context.SaveChanges();
+                        await _context.TeamSocials.AddAsync(ts);
+                        await _context.SaveChangesAsync();
                     }
                 }
 

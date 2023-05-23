@@ -29,31 +29,10 @@
                                 <th class="product-total">Total</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr class="table-body-row">
-                                <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-                                <td class="product-image"><img src="assets/img/products/product-img-1.jpg" alt=""></td>
-                                <td class="product-name">Strawberry</td>
-                                <td class="product-price">$85</td>
-                                <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                <td class="product-total">1</td>
-                            </tr>
-                            <tr class="table-body-row">
-                                <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-                                <td class="product-image"><img src="assets/img/products/product-img-2.jpg" alt=""></td>
-                                <td class="product-name">Berry</td>
-                                <td class="product-price">$70</td>
-                                <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                <td class="product-total">1</td>
-                            </tr>
-                            <tr class="table-body-row">
-                                <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-                                <td class="product-image"><img src="assets/img/products/product-img-3.jpg" alt=""></td>
-                                <td class="product-name">Lemon</td>
-                                <td class="product-price">$35</td>
-                                <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                <td class="product-total">1</td>
-                            </tr>
+                        <tbody id="cookieDatas">
+
+                            
+                           
                         </tbody>
                     </table>
                 </div>
@@ -85,7 +64,7 @@
                     </table>
                     <div class="cart-buttons">
                         <a href="cart.html" class="boxed-btn">Update Cart</a>
-                        <a href="checkout.html" class="boxed-btn black">Check Out</a>
+                        <a href="/cart/checkout" class="boxed-btn black">Check Out</a>
                     </div>
                 </div>
 
@@ -103,3 +82,46 @@
     </div>
 </div>
 <!-- end cart -->
+
+
+@section Scripts{
+    <script>
+
+        
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        let myCookie = JSON.parse(getCookie("products"))
+        let cookieDataDiv = document.getElementById("cookieDatas")
+
+
+        console.log(myCookie)
+
+        if (myCookie.length == 0) {
+            cookieDataDiv.innerHTML +=
+                `
+                <div class="alert alert-danger"> Sebet bosdu. </div>
+                `
+        } else {
+            for (let i = 0; i < myCookie.length; i++) {
+            cookieDataDiv.innerHTML += `
+
+            <tr class="table-body-row">
+                <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
+                <td class="product-image"><img src="${myCookie[i].image}" alt=""></td>
+                <td class="product-name">${myCookie[i].name}</td>
+                <td class="product-price">${myCookie[i].price} ₼</td>
+                <td class="product-quantity"><input type="number" value="${myCookie[i].quantity}" placeholder="0"></td>
+                <td class="product-total">${myCookie[i].quantity * myCookie[i].price} ₼</td>
+            </tr>
+
+            `
+            }
+        }
+
+
+    </script>
+}

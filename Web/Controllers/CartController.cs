@@ -10,9 +10,30 @@ namespace Web.Controllers
 {
     public class CartController : Controller
     {
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public CartController(IHttpContextAccessor httpContextAccessor)
+        {
+            _httpContextAccessor = httpContextAccessor;
+        }
+
         // GET: /<controller>/
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult CheckOut()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CheckOut(string Name)
+        {
+            string cookieValue = Request.Cookies["products"];
+
+
             return View();
         }
     }
