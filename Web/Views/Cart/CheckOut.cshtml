@@ -33,10 +33,10 @@
                                     <div class="card-body">
                                         <div class="billing-address-form">
                                             <p><input name="Name" type="text" placeholder="Name"></p>
-                                            <p><input type="email" placeholder="Email"></p>
-                                            <p><input type="text" placeholder="Address"></p>
-                                            <p><input type="tel" placeholder="Phone"></p>
-                                            <p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
+                                            <p><input name="Email" type="email" placeholder="Email"></p>
+                                            <p><input name="Address" type="text" placeholder="Address"></p>
+                                            <p><input name="PhoneNumber" type="tel" placeholder="Phone"></p>
+                                            <p><textarea name="Message" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
                                         </div>
                                     </div>
                                 </div>
@@ -147,6 +147,8 @@
                 <tr>
                     <td>${myCookie[i].name}</td>
                     <td>${myCookie[i].quantity * myCookie[i].price} ₼</td>
+                    <input type="hidden" value="${myCookie[i].name}" name="ProductName" />
+                    <input type="hidden" value="${myCookie[i].quantity * myCookie[i].price}" name="ProductPrice" />
                 </tr>
 
                 `

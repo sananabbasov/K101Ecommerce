@@ -19,7 +19,8 @@ namespace Web.Data
 		public DbSet<Team> Teams { get; set; }
 		public DbSet<Social> Socials { get; set; }
 		public DbSet<TeamSocial> TeamSocials { get; set; }
-
+		public DbSet<Order> Orders { get; set; }
+		public DbSet<OrderItem> OrderItems { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder builder)
         {
